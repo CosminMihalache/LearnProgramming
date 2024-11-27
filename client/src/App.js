@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import CoursesPage from './pages/CoursesPage';
 import CourseDetailPage from './pages/CourseDetailPage';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import './App.css';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route path="/course/:id" element={<CourseDetailPage />} />
           </Routes>
         </main>
+        <Footer />
       </div>
     </Router>
   );

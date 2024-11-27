@@ -23,7 +23,7 @@ const CourseCard = ({ course }) => {
       <div className="course-content">
         <h3>{course.title}</h3>
         <Link to={`/course/${course._id}`} className="view-course">
-          View Course
+          Vezi cursul
         </Link>
       </div>
     </div>

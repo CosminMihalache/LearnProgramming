@@ -5,6 +5,12 @@
   padding: 1rem 2rem;
   background-color: #f8f9fa;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box;
 }
 
 .navbar-logo a {
@@ -24,24 +30,58 @@
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #007bff;
+  color: #667eea;
 }
 
-.courses-button {
-  background-color: #007bff;
-  color: white !important;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
 }
 
-.courses-button:hover {
-  background-color: #0056b3;
-  color: white;
+.burger-menu span {
+  display: block;
+  width: 2rem;
+  height: 0.25rem;
+  background: #333;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .burger-menu {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    flex-direction: column;
+    width: 200px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-logo a {
+    font-size: 1.1rem;
+    max-width: 200px;
+  }
 } 

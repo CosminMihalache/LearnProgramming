@@ -63,8 +63,8 @@
 
 .courses-button {
   display: inline-block;
-  background-color: #007bff;
-  color: white;
+  background-color: #3e9db9;
+  color: white !important;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   text-decoration: none;
@@ -72,5 +72,121 @@
 }
 
 .courses-button:hover {
-  background-color: #0056b3;
+  background-color: #3e9db9;
+}
+
+.about-section {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.intro-content, .features, .mission, .final-cta {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.intro-content h2, .features h2, .mission h2, .final-cta h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.intro-content p, .mission p, .final-cta p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.volunteer {
+  background-color: #3e9db9;
+}
+
+.volunteer:hover {
+  background-color: #5865F2;
+}
+
+.features ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.features li {
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  font-size: 1.1rem;
+  color: #666;
+  transition: transform 0.3s ease;
+}
+
+.features li:hover {
+  transform: translateY(-5px);
+}
+
+.final-cta {
+  background: linear-gradient(135deg, #1b4f92 35%, #50bad4 100%);
+  padding: 4rem 2rem;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+}
+
+.final-cta h2, .final-cta p {
+  color: white;
+}
+
+.final-cta .courses-button {
+  background-color: #3e9db9;
+  color: #5865F2;
+  margin-top: 2rem;
+}
+
+.final-cta .courses-button:hover {
+  background-color: #f8f9fa;
+}
+
+@media (max-width: 768px) {
+  .cta-buttons {
+    flex-direction: column;
+  }
+  
+  .features ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+.discord-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  background-color: #5865F2;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: 2rem;
+}
+
+.discord-button:hover {
+  background-color: #4752C4;
+}
+
+.discord-icon {
+  width: 24px;
+  height: 24px;
 } 

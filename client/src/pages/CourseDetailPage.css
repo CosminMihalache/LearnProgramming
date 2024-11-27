@@ -30,6 +30,18 @@
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+.course-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.course-content li {
+  padding: 0.5rem 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
 .course-description {
   font-size: 1.1rem;
   line-height: 1.6;
