@@ -28,13 +28,27 @@ app.use((req, res, next) => {
   next();
 });
 
-// MongoDB connection
-mongoose.connect(process.env.MONGODB_URI)
-  .then(() => console.log('MongoDB connected'))
-  .catch(err => {
-    console.error('MongoDB connection error:', err.message);
-    process.exit(1);
+// Add more detailed logging
+console.log('MONGODB_URI exists:', !!process.env.MONGODB_URI);
+console.log('MONGODB_URI type:', typeof process.env.MONGODB_URI);
+console.log('Attempting to connect to:', 
+  process.env.MONGODB_URI 
+    ? process.env.MONGODB_URI.replace(/(mongodb\+srv:\/\/[^:]+:)([^@]+)/, '$1*****')
+    : 'undefined'
+);
+
+// MongoDB connection with more detailed error handling
+mongoose.connect('mongodb+srv://cosminstefan545:6K27eLXLP41NMPMg@cluster0.7lfs8.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+.then(() => console.log('MongoDB connected successfully'))
+.catch(err => {
+  console.error('MongoDB connection error details:', {
+    name: err.name,
+    message: err.message,
+    code: err.code,
+    stack: err.stack
   });
+  process.exit(1);
+});
 
 // Routes
 app.use('/api/courses', require('./routes/courses'));
