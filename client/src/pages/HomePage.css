@@ -1,0 +1,76 @@
+.homepage {
+  padding: 2rem;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 8px;
+  margin-bottom: 3rem;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.featured-courses {
+  margin-top: 3rem;
+}
+
+.featured-courses h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.error {
+  text-align: center;
+  padding: 2rem;
+  color: #dc3545;
+  font-size: 1.2rem;
+}
+
+.no-courses {
+  text-align: center;
+  grid-column: 1 / -1;
+  padding: 2rem;
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.courses-button {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.courses-button:hover {
+  background-color: #0056b3;
+} 
