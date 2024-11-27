@@ -1,6 +1,7 @@
 import React from 'react';
 import HeroBanner from '../components/HeroBanner';
 import CourseList from '../components/CourseList';
+import ChatBot from '../components/ChatBot';
 import './HomePage.css';
 
 const HomePage = () => {
@@ -8,6 +9,7 @@ const HomePage = () => {
     <div className="home-page">
       <HeroBanner />
       <CourseList />
+      <ChatBot />
       
       <section className="about-section">
         <div className="intro-content">
