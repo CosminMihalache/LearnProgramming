@@ -9,20 +9,17 @@
     "install-client": "cd client && npm install",
     "install-server": "cd server && npm install",
     "build": "cd client && npm install && npm run build",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run install-client && npm run build"
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "dependencies": {
     "concurrently": "^7.0.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.1",
-    "mongoose": "^6.0.0"
-  },
-  "devDependencies": {
+    "mongoose": "^6.0.0",
     "nodemon": "^2.0.15"
   },
   "engines": {
-    "node": "16.x"
+    "node": ">=18.x"
   }
 } 
