@@ -37,18 +37,30 @@ console.log('Attempting to connect to:',
     : 'undefined'
 );
 
-// MongoDB connection with more detailed error handling
-mongoose.connect('mongodb+srv://cosminstefan545:6K27eLXLP41NMPMg@cluster0.7lfs8.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
-.then(() => console.log('MongoDB connected successfully'))
-.catch(err => {
-  console.error('MongoDB connection error details:', {
-    name: err.name,
-    message: err.message,
-    code: err.code,
-    stack: err.stack
-  });
+const mongooseOptions = {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  serverSelectionTimeoutMS: 5000,
+  retryWrites: true,
+};
+
+// Safely get MongoDB URI
+const mongoURI = process.env.MONGODB_URI;
+if (!mongoURI) {
+  console.error('MONGODB_URI is not defined in environment variables');
   process.exit(1);
-});
+}
+
+// MongoDB connection
+mongoose.connect(mongoURI, mongooseOptions)
+  .then(() => console.log('MongoDB connected successfully'))
+  .catch(err => {
+    console.error('MongoDB connection error:', {
+      name: err.name,
+      message: err.message
+    });
+    process.exit(1);
+  });
 
 // Routes
 app.use('/api/courses', require('./routes/courses'));

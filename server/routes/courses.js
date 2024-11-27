@@ -7,7 +7,7 @@ const { MongoClient } = require('mongodb');
 const Course = require('../models/Course');
 
 // MongoDB connection URI
-const mongoURI = 'your_mongodb_uri';
+const mongoURI = process.env.MONGODB_URI;
 
 // Create a storage object with a given configuration
 const storage = new GridFsStorage({
