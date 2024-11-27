@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API_URL = process.env.NODE_ENV === 'production'
-  ? 'https://your-render-backend-url.onrender.com/api'
+  ? 'https://newfolder-7mxe.onrender.com/api'
   : 'http://localhost:5000/api';
 
 const api = axios.create({
